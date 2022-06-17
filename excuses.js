@@ -1,7 +1,9 @@
 
-var quien = ['the dog','my granma','his turtle','my bird'];
+var quien = ['The dog','My granma','His turtle','My bird'];
 var que = ['eat','pissed','crushed','broked'];
 var cuando = ['before the class','right in time','when I finished','during my lunch','while I was praying'];
+var parrafo 
+
 
 function excuse(){
 
@@ -11,7 +13,16 @@ function excuse(){
 
     let d = ( quien[a]+' '+que[b]+' '+cuando[c]);
 
-    return d;
+    if(parrafo){
+        parrafo.innerText = d;
+    }
 }
 
-console.log(excuse());
+window.onload = () => {
+ 
+    document.querySelector("#evento").addEventListener("click", excuse);
+    parrafo = document.querySelector("#excusa");
+
+    console.log(parrafo);
+}
+
